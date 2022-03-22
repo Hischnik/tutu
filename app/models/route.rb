@@ -8,4 +8,6 @@ class Route < ActiveRecord::Base
 
   has_many :railsway_stations_routes
   has_many :railsway_stations, through: :railsway_stations_routes
+
+  validates :name, presence: true
 end

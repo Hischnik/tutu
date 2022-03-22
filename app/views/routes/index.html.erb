@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Список маршрутов</h1>
+
+<div id="routes">
+  <% @routes.each do |route| %>
+    <p>
+      <%#= render route %>
+      <%= route.name%>
+      <%= link_to "Показать", route %>
+      <%= link_to "Редактировать", edit_route_path(route) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Новая станция", new_route_path %>
+
+<h2></h2>
+
+<%= link_to "На главную", welcome_index_path %>
