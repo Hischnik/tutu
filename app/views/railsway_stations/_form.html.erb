@@ -1,0 +1,13 @@
+<%= form_with(model: railsway_station) do |form| %>
+
+  <%= render "common/errors", resource: railsway_station %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.submit "#{ @railsway_station.new_record? ? 'Создать' : 'Изменить'}" %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Список станций</h1>
+
+<div id="railsway_stations">
+  <% @railsway_stations.each do |railsway_station| %>
+    <p>
+      <%#= render railsway_station %>
+      <%= railsway_station.title%>
+      <%= link_to "Показать", railsway_station %>
+      <%= link_to "Редактировать", edit_railsway_station_path(railsway_station) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Новая станция", new_railsway_station_path %>
+
+<h2></h2>
+
+<%= link_to "На главную", welcome_index_path %>

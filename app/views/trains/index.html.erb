@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Список поездов</h1>
+
+<div id="trains">
+
+    <%= render @trains %>
+
+</div>
+
+<%= link_to "Новый поезд", new_train_path %>
+
+<h2></h2>
+
+<%= link_to "На главную", welcome_index_path %>

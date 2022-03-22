@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @railsway_station %>
+
+<% if @railsway_station.routes.empty? %>
+  <p> Станция не входит ни в один маршрут <p>
+<% else %>
+  <p>Станция входит в следующие маршруты <p>
+  <ul>
+    <% @railsway_station.routes.each do |route| %>
+      <li> <%= route.name %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div>
+  <%= link_to "Редактировать", edit_railsway_station_path(@railsway_station) %> |
+  <%= link_to "Назад", railsway_stations_path %>
+
+  <%= button_to "Удалить", @railsway_station, method: :delete %>
+</div>
